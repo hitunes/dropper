@@ -382,7 +382,10 @@ div.main__content-bottom>div:nth-child(7)>div {
     height: 36.9px;
     background-color: #fafbfc;
     padding-left: 16.7px;
-    padding-top: 16.8px
+    padding-right: 16.7px;
+    padding-top: 16.8px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .cal-header h5 {
@@ -474,6 +477,13 @@ div.main__content-bottom>div:nth-child(7)>div {
 
 
 /* Page 2 */
+
+.arrow-icon {
+    width: 16px;
+    height: 9px;
+    transform: rotate(-31deg);
+    background-color: #0093ee;
+}
 
 .ctrl-2-a {
     width: 78px;

@@ -8,4 +8,4 @@ checkbox.forEach(function (check) {
   })
 })
 
-// document.querySelectorAll('input[type="ch"]')
+//
