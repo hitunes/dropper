@@ -126,7 +126,7 @@
 
                                     <span style="font-size: 11px; color: #3f536e; opacity: 0.5;">Complexity Level: Hard</span>
                                 </div>
-                                <div class="main__content-circle-details">
+                                <div class="main__content-circle-details-m" ondrop="drop" ondragover="">
                                     <img src="./assets/img/plus.png" alt="">
                                 </div>
                                 <div class="main__content-circle-details">
@@ -137,7 +137,7 @@
                             </div>
                             <div class="main__content-circle-title">
                                 <div>Developer 1</div>
-                                <div>2 items Added</div>
+                                <div id="getter"></div>
                                 <div>Developer 3</div>
                             </div>
                         </div>
@@ -155,68 +155,68 @@
                     </div>
                     <div class="control">
                         <div class="control-btn--wrapper">
-                            <div class="control-btn  ctrl-2-a">Design
+                            <div class="control-btn  ctrl-2-a" draggable="true">Design
                             </div>
-                            <div class="control-btn  ctrl-2-b">Marketing
+                            <div class="control-btn  ctrl-2-b" draggable="true">Marketing
                             </div>
-                            <div class="control-btn  ctrl-2-c">Coding
-                            </div>
-                        </div>
-                        <div class="control-btn--wrapper">
-                            <div class="control-btn  ctrl-2-a">iOS
-                            </div>
-                            <div class="control-btn  ctrl-2-b">Profile
-                            </div>
-                            <div class="control-btn  ctrl-2-c">Search
+                            <div class="control-btn  ctrl-2-c " draggable="true">Coding
                             </div>
                         </div>
                         <div class="control-btn--wrapper">
-                            <span class="control-btn  ctrl-2-a">Web
+                            <div class="control-btn  ctrl-2-a" draggable="true">iOS
+                            </div>
+                            <div class="control-btn  ctrl-2-b" draggable="true">Profile
+                            </div>
+                            <div class="control-btn  ctrl-2-c " draggable="true">Search
+                            </div>
+                        </div>
+                        <div class="control-btn--wrapper">
+                            <span class="control-btn  ctrl-2-a" draggable="true">Web
               </span>
-                            <span class="control-btn  ctrl-2-b">Hybrid
+                            <span class="control-btn  ctrl-2-b" draggable="true">Hybrid
               </span>
-                            <span class="control-btn  ctrl-2-c">Logo
+                            <span class="control-btn  ctrl-2-c " draggable="true">Logo
               </span>
                         </div>
                         <div class="control-btn--wrapper">
-                            <span class="control-btn  ctrl-2-a">3pages
+                            <span class="control-btn  ctrl-2-a" draggable="true">3pages
               </span>
-                            <span class="control-btn  ctrl-2-b">Location
+                            <span class="control-btn  ctrl-2-b" draggable="true">Location
               </span>
-                            <span class="control-btn  ctrl-2-c">Android
-
-              </span>
-                        </div>
-                        <div class="control-btn--wrapper">
-                            <span class="control-btn  ctrl-2-a">3D
-
-              </span>
-                            <span class="control-btn  ctrl-2-b">Algorithm
-
-              </span>
-                            <span class="control-btn  ctrl-2-c">Coding
+                            <span class="control-btn  ctrl-2-c " draggable="true">Android
 
               </span>
                         </div>
                         <div class="control-btn--wrapper">
-                            <span class="control-btn  ctrl-2-a">Sketch
+                            <span class="control-btn  ctrl-2-a" draggable="true">3D
 
               </span>
-                            <span class="control-btn  ctrl-2-b">Payment
+                            <span class="control-btn  ctrl-2-b" draggable="true">Algorithm
 
               </span>
-                            <span class="control-btn  ctrl-2-c">Gaming
+                            <span class="control-btn  ctrl-2-c " draggable="true">Coding
 
               </span>
                         </div>
                         <div class="control-btn--wrapper">
-                            <span class="control-btn  ctrl-2-a">UI/UX
+                            <span class="control-btn  ctrl-2-a" draggable="true">Sketch
 
               </span>
-                            <span class="control-btn  ctrl-2-b">In-App Pur.
+                            <span class="control-btn  ctrl-2-b" draggable="true">Payment
 
               </span>
-                            <span class="control-btn  ctrl-2-c">Sprite
+                            <span class="control-btn  ctrl-2-c " draggable="true">Gaming
+
+              </span>
+                        </div>
+                        <div class="control-btn--wrapper">
+                            <span class="control-btn  ctrl-2-a" draggable="true">UI/UX
+
+              </span>
+                            <span class="control-btn  ctrl-2-b" draggable="true">In-App Pur.
+
+              </span>
+                            <span class="control-btn  ctrl-2-c " draggable="true">Sprite
 
               </span>
                         </div>
@@ -233,42 +233,7 @@
             </div>
         </div>
     </main>
-
-    <script>
-        var countDrops = 0;
-        window.onload = function() {
-            var dragger = Array.from(document.getElementsByClassName('control-btn'));
-
-            for (var i = 0; i < dragger.length; i++) {
-                el = dragger[i];
-
-                // even required? Spec says yes, browsers say no.
-                el.setAttribute('draggable', 'true');
-
-                addEvent(el, 'dragstart', function(e) {
-                    e.dataTransfer.setData('Text', this.id); // set *something* required otherwise doesn't work
-                });
-            }
-            var dropper = document.getElementsByClassName('main__content-circle-details');
-
-            addEvent(dropper, 'dragover', function(e) {
-                if (e.preventDefault) e.preventDefault(); // allows us to drop
-                this.className = 'over';
-                return false;
-            });
-
-            addEvent(dropper, 'dragleave', function() {
-                this.className = '';
-            });
-            addEvent(dropper, 'drop', function(e) {
-                if (e.stopPropagation) e.stopPropagation(); // stops the browser from redirecting...why???
-                countDrops++;
-                alert(countDrops);
-                var el = document.getElementById(e.dataTransfer.getData('Text'));
-                el.target.appendChild(document.getElementsByClassName('main__content-circle-details'));
-                return false;
-            })
-        };
+    <script src="assets/js/app.js">
     </script>
 </body>
 
