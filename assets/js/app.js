@@ -6,6 +6,9 @@ checkbox.forEach(function (check) {
     var text = e.target.parentElement.previousElementSibling;
     (check.checked == true) ? text.style.color = '#0090f7' : text.style.color = '#a4aab3';
   })
-})
+});
+function bomb() {
+
+}
 
 //

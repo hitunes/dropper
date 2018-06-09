@@ -147,8 +147,8 @@
                     <div class="cal-header">
                         <h5>start date</h5>
                         <span>
-                            <i style="font-weight: bolder" class="fa fa-angle-down"></i>
-                          </span>
+              <i style="font-weight: bolder" class="fa fa-angle-down"></i>
+            </span>
                     </div>
                     <div class="calendar">
                         <input type="date">
@@ -233,6 +233,43 @@
             </div>
         </div>
     </main>
+
+    <script>
+        var countDrops = 0;
+        window.onload = function() {
+            var dragger = Array.from(document.getElementsByClassName('control-btn'));
+
+            for (var i = 0; i < dragger.length; i++) {
+                el = dragger[i];
+
+                // even required? Spec says yes, browsers say no.
+                el.setAttribute('draggable', 'true');
+
+                addEvent(el, 'dragstart', function(e) {
+                    e.dataTransfer.setData('Text', this.id); // set *something* required otherwise doesn't work
+                });
+            }
+            var dropper = document.getElementsByClassName('main__content-circle-details');
+
+            addEvent(dropper, 'dragover', function(e) {
+                if (e.preventDefault) e.preventDefault(); // allows us to drop
+                this.className = 'over';
+                return false;
+            });
+
+            addEvent(dropper, 'dragleave', function() {
+                this.className = '';
+            });
+            addEvent(dropper, 'drop', function(e) {
+                if (e.stopPropagation) e.stopPropagation(); // stops the browser from redirecting...why???
+                countDrops++;
+                alert(countDrops);
+                var el = document.getElementById(e.dataTransfer.getData('Text'));
+                el.target.appendChild(document.getElementsByClassName('main__content-circle-details'));
+                return false;
+            })
+        };
+    </script>
 </body>
 
-</html>`
+</html>
