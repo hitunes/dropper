@@ -420,7 +420,7 @@ div.main__content-bottom>div:nth-child(7)>div {
 
 .ctrl-a {
     width: 78px;
-    padding: 3px 7px 6px 10px;
+    padding: 3px 7px 6px 0;
     margin-right: 5px;
     display: flex;
     justify-content: space-between;
@@ -603,3 +603,14 @@ div.main__content-bottom>div:nth-child(7)>div {
 
 
 /* Page 2 */
+
+
+/* Helper */
+
+.auto {
+    margin: 0 auto;
+}
+
+h5 {
+    font-weight: normal;
+}
