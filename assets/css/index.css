@@ -314,7 +314,7 @@ div.main__content-bottom>div:nth-child(1)>ul {
     padding-left: 3px;
     border-bottom: solid 1px #eaeaea;
     width: 150px;
-    margin-bottom: 21px;
+    margin-bottom: 16px;
 }
 
 div.main__content-bottom>div:nth-child(1)>ul li {
@@ -403,12 +403,12 @@ div.main__content-bottom>div:nth-child(7)>div {
 }
 
 .calendar {
-    height: 275px;
+    height: 250px;
 }
 
 .control {
     width: 268px;
-    margin: 5px 18px 42px 20px;
+    margin: 5px 18px 52px 20px;
 }
 
 .control-btn {
