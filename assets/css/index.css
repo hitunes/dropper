@@ -122,7 +122,7 @@ input {
 .aside__bottom-content {
     height: 60px;
     margin: 0 0 4px 13px;
-    padding-top: 11px;
+    padding-top: 4px;
     border-radius: 5px;
     display: flex;
     min-width: 100%;
@@ -134,7 +134,7 @@ input {
     margin-bottom: 4px;
     height: 58px;
     margin-top: 0;
-    padding-top: 11px;
+    padding-top: 4px;
     border-radius: 5px;
     display: flex;
     min-width: 100%;
@@ -232,14 +232,14 @@ input {
 }
 
 .main__content--wrapper {
-    margin-left: 250px;
+    margin-left: 234px;
     width: 315.2px;
     ;
 }
 
 .main__content--overflow {
     overflow-y: scroll;
-    height: 330px;
+    height: 350px;
     margin-right: 16px;
 }
 
@@ -359,7 +359,7 @@ a {
 }
 
 div.main__content-bottom>div>div:nth-child(6)>div {
-    margin-top: 18px;
+    margin-top: 13px;
 }
 
 .checkbox {
@@ -408,7 +408,7 @@ div.main__content-bottom>div:nth-child(7)>div {
 
 .control {
     width: 268px;
-    margin: 5px 18px 52px 20px;
+    margin: 5px 18px 44px 20px;
 }
 
 .control-btn {
