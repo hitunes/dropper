@@ -239,7 +239,7 @@ input {
 
 .main__content--overflow {
     overflow-y: scroll;
-    height: 350px;
+    height: 340px;
     margin-right: 16px;
 }
 
