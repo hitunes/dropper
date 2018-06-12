@@ -406,6 +406,59 @@ div.main__content-bottom>div:nth-child(7)>div {
     height: 250px;
 }
 
+.calendar-head {
+    height: 20px;
+    font-size: 15px;
+    line-height: 1.29;
+    color: #2c405a;
+    margin-left: 16.7px;
+    margin-top: 11.3px;
+    margin-bottom: 10.3px;
+}
+
+.calendar-day-info {
+    width: 234px;
+    font-size: 11.4px;
+    line-height: 1.46;
+    color: #8dabc4;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25.5px;
+    margin-bottom: 15.7px;
+}
+
+.calendar-day-num {
+    width: 234px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25.5px;
+    font-size: 14px;
+    color: #3f536e;
+    margin-bottom: 17.2px;
+}
+
+.calendar-day-num-edit {
+    width: 234px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25.5px;
+    font-size: 14px;
+    color: #3f536e;
+    margin-bottom: 14.9px;
+}
+
+.num-color {
+    background-color: #0090f7;
+    ;
+    height: 22px;
+    width: 22px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
 .control {
     width: 268px;
     margin: 5px 18px 44px 20px;
@@ -417,6 +470,17 @@ div.main__content-bottom>div:nth-child(7)>div {
     background-color: #e4f5ff;
     font-size: 13px;
     color: #0093ee;
+}
+
+.control-btn-date {
+    font-size: 11.4px;
+    color: #0093ee;
+    width: 90.6px;
+    height: 22px;
+    opacity: 0.6;
+    border-radius: 88px;
+    border: solid 0.9px #0090f7;
+    margin-left: 4.7px
 }
 
 .ctrl-a {
@@ -436,6 +500,13 @@ div.main__content-bottom>div:nth-child(7)>div {
 }
 
 .ctrl-c {
+    width: 79px;
+    padding: 3px 7px 6px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ctrl-d {
     width: 79px;
     padding: 3px 7px 6px 5px;
     display: flex;
@@ -752,13 +823,6 @@ input[type=range]::-ms-thumb {
     background-color: rgba(199, 234, 242, 0.32);
     border-radius: 100px;
 }
-
-
-/* .main__content-3--overflow {
-    overflow-y: scroll;
-    margin-right: 16px;
-    height: 764px;
-} */
 
 
 /* page 3 */
